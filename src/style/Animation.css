@@ -1,0 +1,166 @@
+.animate-1-up {
+  animation: animate-1-up 1s;
+  animation-fill-mode: backwards;
+}
+
+.animate-1-right {
+  animation: animate-1-right 1s;
+  animation-fill-mode: backwards;
+}
+
+.animate-1-left {
+  animation: animate-1-left 1s;
+  animation-fill-mode: backwards;
+}
+
+/* Animate 2 */
+.animate-2-up {
+  animation: animate-2-up 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.animate-2-right {
+  animation: animate-2-right 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.animate-2-left {
+  animation: animate-2-left 0.5s;
+  animation-fill-mode: backwards;
+}
+
+/* Progress */
+.animate-progress-70 {
+  animation: animate-progress-70 0.8s;
+  animation-fill-mode: backwards;
+  width: 70%;
+}
+
+.animate-progress-90 {
+  animation: animate-progress-90 0.8s;
+  animation-fill-mode: backwards;
+  width: 90%;
+}
+
+.animate-progress-85 {
+  animation: animate-progress-85 0.8s;
+  animation-fill-mode: backwards;
+  width: 85%;
+}
+
+/* Animation keyframes 1 */
+@keyframes animate-1-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-1-right {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-1-left {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animate keyframes 2 */
+@keyframes animate-2-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-2-right {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animate-2-left {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* progress bar */
+@keyframes animate-progress-70 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes animate-progress-90 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes animate-progress-85 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}

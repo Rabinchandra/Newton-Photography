@@ -1,0 +1,25 @@
+.about-me {
+  text-align: center;
+  max-width: 600px;
+  width: 80%;
+  margin: auto;
+  margin-top: 180px;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #5a5a5a;
+}
+
+.about-me img {
+  width: 230px;
+  margin-bottom: 50px;
+}
+
+.about-me strong {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about-me p {
+  font-size: 18px;
+}

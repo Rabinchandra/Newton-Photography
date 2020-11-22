@@ -1,0 +1,37 @@
+.about-developer {
+  text-align: center;
+  max-width: 600px;
+  width: 80%;
+  margin: auto;
+  margin-top: 180px;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #5a5a5a;
+}
+
+.about-developer img {
+  width: 230px;
+  margin-bottom: 50px;
+}
+
+.about-developer strong {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.about-developer p {
+  font-size: 18px;
+}
+
+.developer-contact i {
+  color: #3d3d3d;
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 16px;
+}
+
+.developer-contact i:hover {
+  color: black;
+}

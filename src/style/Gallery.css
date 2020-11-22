@@ -1,0 +1,210 @@
+.gallery {
+  /* border: 1px solid red; */
+  padding-top: 100px;
+  text-align: center;
+}
+
+#modal-box__input {
+  display: none;
+}
+
+.uploadForm {
+  height: 100px;
+}
+
+.uploadForm__modal-box {
+  width: 80%;
+  max-width: 450px;
+  height: 350px;
+  margin: auto;
+  padding: 0px;
+  position: relative;
+  z-index: 1200;
+  background: #fff;
+  top: -700px;
+  transition: 0.5s;
+}
+
+.uploadForm__modal-box.on {
+  top: -80px;
+}
+
+.uploadForm__modal-box h4 {
+  margin: 0;
+  margin-bottom: 70px;
+  color: #333;
+  background: #f5f5f5;
+  text-transform: uppercase;
+  padding: 14px;
+}
+
+.uploadForm__modal-box label {
+  color: #fff;
+  background: #19c5f0;
+  padding: 0.7em 1.5em;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.uploadForm__modal-box label:hover {
+  background: #11b1da;
+}
+
+.file-name {
+  margin-top: 30px;
+}
+
+.modal-box__correct-incorrect-btns {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal-box__correct-incorrect-btns button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: none;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal-box__correct-incorrect-btns #correct {
+  background: #70ef4a;
+}
+
+.modal-box__correct-incorrect-btns #incorrect {
+  background: #ef4a7b;
+}
+
+.modal-box__correct-incorrect-btns #correct:hover {
+  background: #5ad136;
+}
+
+.modal-box__correct-incorrect-btns #incorrect:hover {
+  background: #cf2d5e;
+}
+
+.upload__progress-container {
+  margin: auto;
+  margin-top: 30px;
+  width: 70%;
+  background: #ebebeb;
+}
+
+.upload__progress-container div {
+  background: #44f57f;
+  height: 14px;
+  transition: 0.5s;
+}
+
+/* overlay */
+.uploadForm__overlay {
+  background: rgba(51, 51, 51, 0.61);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -100;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.uploadForm__overlay.on {
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* Upload photo Btn */
+.uploadForm__upload-photo-btn {
+  border: none;
+  padding: 1em 1.5em;
+  font-size: 16px;
+  color: #fff;
+  background: #333;
+  margin-top: 10px;
+  outline: none;
+}
+
+.uploadForm__upload-photo-btn:hover {
+  background: black;
+  cursor: pointer;
+}
+
+/* photo container */
+.photos__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2em;
+  grid-gap: 2em;
+}
+
+.photo {
+  height: 400px;
+  background-size: cover !important;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+  outline: none;
+}
+
+.photo:hover {
+  opacity: 1;
+}
+
+/* Delete photo button */
+.delete-photo {
+  text-align: right;
+  padding: 12px;
+}
+
+/* Loading */
+.loading-container {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.loading-container img {
+  width: 100%;
+  transform: scale(1.7);
+}
+
+.loading__caption {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1390px) {
+  .photos__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .photos__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .photo {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .photo {
+    height: 300px;
+    transform: scale(1.1);
+    margin-bottom: 40px;
+  }
+}
