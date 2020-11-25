@@ -18,22 +18,28 @@ function Photos({ user }) {
   const deletePhoto = (name, id) => {
     // Delete from storage
     if (window.confirm("Are you sure want to delete?")) {
-      storage
-        .ref(name)
+      // Delete from firestore
+      db.collection("photos")
+        .doc(id)
         .delete()
         .then(() => {
-          // Delete from firestore
-          db.collection("photos")
-            .doc(id)
-            .delete()
-            .then(() => {
-              alert("Image Deleted successfully!");
-            })
-            .catch((err) => {
-              alert(err);
-            });
+          // Delete from storage
+          return storage.ref(name).delete();
         })
-        .catch((err) => alert(err.message));
+        .then(() => {
+          alert("Photo deleted successfully!");
+        })
+        .catch((err) => {
+          // err.serverResponse_ is the response from firestore
+          if (err.serverResponse_) {
+            alert(
+              "Storage Error :",
+              JSON.parse(err.serverResponse_).error.message
+            );
+          } else {
+            alert(err);
+          }
+        });
     }
   };
 
