@@ -149,13 +149,9 @@
   height: 400px;
   background-size: cover !important;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.5s;
   outline: none;
-}
-
-.photo:hover {
-  opacity: 1;
 }
 
 /* Delete photo button */
