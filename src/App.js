@@ -44,6 +44,8 @@ function App() {
       });
   };
 
+  console.log("Fixed 1");
+
   return (
     <div className='App'>
       <Router>
